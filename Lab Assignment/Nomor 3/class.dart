@@ -4,7 +4,7 @@ class ATM {
   ATM(this._balance);
 
   void deposit(double amount) {
-    if(amount > 0) {
+    if(amount >= 50) {
       _balance += amount;
       print("Deposit: $amount");
     } else {
@@ -13,7 +13,7 @@ class ATM {
   }
 
   void withdraw(double amount) {
-    if (amount > 0 && amount <= _balance) {
+    if (amount >= 50 && amount <= _balance) {
       _balance -= amount;
       print("Withdraw: $amount");
     } else {
@@ -27,17 +27,4 @@ class ATM {
 }
 
 
-  void main() {
-  ATM atm = ATM(1000);
-
-  atm.checkBalance();
-
-  atm.deposit(200);
-
-  atm.checkBalance();
-
-  atm.withdraw(150);
-
-  atm.checkBalance();
-
-}
+  

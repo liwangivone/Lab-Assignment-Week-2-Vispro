@@ -4,7 +4,7 @@ class BankAccount {
   BankAccount(this._balance);
 
   void deposit(double amount) {
-    if (amount > 0) {
+    if (amount >= 50) {
       _balance += amount;
       print("Deposit: $amount");
     } else {
@@ -13,7 +13,7 @@ class BankAccount {
   }
 
   void withdraw(double amount) {
-    if (amount > 0 && amount <= _balance) {
+    if (amount >= 50 && amount <= _balance) {
       _balance -= amount;
       print("Withdraw: $amount");
     } else {
@@ -51,4 +51,5 @@ void main() {
   savingsAccount.withdraw(100);
 
   savingsAccount.applyInterest(10);
+  
 }
